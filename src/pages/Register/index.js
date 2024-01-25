@@ -13,6 +13,7 @@ import {
     TouchableOpacity,
     ActivityIndicator,
     Alert,
+    TouchableWithoutFeedback,
 } from 'react-native';
 import { colors } from '../../utils/colors';
 import { MyDimensi, fonts, windowWidth } from '../../utils/fonts';
@@ -256,6 +257,26 @@ export default function Register({ navigation }) {
                                 onPress={simpan}
                             />
 
+                            <TouchableWithoutFeedback onPress={() => navigation.navigate('Login')}>
+                                <View style={{
+                                    marginTop: 10,
+                                    backgroundColor: colors.tertiary,
+                                    justifyContent: 'center',
+                                    alignItems: 'center'
+                                }}>
+                                    <Text style={{
+                                        fontSize: MyDimensi / 4,
+                                        fontFamily: fonts.primary[400],
+                                        textAlign: 'center',
+                                        color: colors.primary
+                                    }}>Sudah memiliki Akun ? <Text style={{
+                                        fontSize: MyDimensi / 4,
+                                        fontFamily: fonts.primary[600],
+                                        textAlign: 'center',
+                                        color: colors.foourty
+                                    }}>Masuk disini</Text></Text>
+                                </View>
+                            </TouchableWithoutFeedback>
                         </>
                     }
 

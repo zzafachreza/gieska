@@ -1,14 +1,25 @@
 import { ScrollView, StyleSheet, Text, TouchableNativeFeedback, View } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { MyDimensi, colors, fonts } from '../../utils'
 import { MyButton, MyGap, MyHeader, MyInput, MyPicker } from '../../components'
 import { Image } from 'react-native'
+import { useState } from 'react'
+import axios from 'axios'
+import { apiURL } from '../../utils/localStorage'
 
 
 export default function Periksagigimu({ navigation }) {
     const backPage = () => {
         navigation.goBack();
     }
+
+    const [data, setData] = useState([])
+    useEffect(() => {
+        axios.post(apiURL + 'materi').then(res => {
+            console.log(res.data);
+            setData(res.data)
+        })
+    }, []);
     return (
         <View style={{ flex: 1, backgroundColor: colors.tertiary }}>
             {/* HEADER */}
@@ -19,10 +30,7 @@ export default function Periksagigimu({ navigation }) {
                 <View style={{ padding: 10, }}>
 
                     <View>
-                        <TouchableNativeFeedback onPress={() => navigation.navigate('Konten', {
-                            judul: 'Ayo Ketahui Tanda-tanda Lubang Di Gigi mu',
-                            file: 'https://gieska.okeadmin.com/datafoto/01.pdf',
-                        })}>
+                        <TouchableNativeFeedback onPress={() => navigation.navigate('Konten', data[0])}>
                             <View style={{
                                 backgroundColor: colors.foourty, padding: 10, borderRadius: 10, flexDirection: "row",
                                 justifyContent: 'space-between', borderWidth: 1, borderColor: colors.primary
@@ -48,10 +56,7 @@ export default function Periksagigimu({ navigation }) {
                     <MyGap jarak={20} />
 
                     <View>
-                        <TouchableNativeFeedback onPress={() => navigation.navigate('Konten', {
-                            judul: 'Ayo Ketahui Kondisi Tumpatan Gigi',
-                            file: 'https://gieska.okeadmin.com/datafoto/02.pdf',
-                        })}>
+                        <TouchableNativeFeedback onPress={() => navigation.navigate('Konten', data[1])}>
                             <View style={{
                                 backgroundColor: colors.foourty, padding: 10, borderRadius: 10, flexDirection: "row",
                                 justifyContent: 'space-between', borderWidth: 1, borderColor: colors.primary

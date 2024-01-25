@@ -35,7 +35,7 @@ export default function Diagnosa2({ navigation, route }) {
 
         <View>
 
-          <FlatList data={gigi} renderItem={({ item, index }) => {
+          <FlatList showsVerticalScrollIndicator={false} data={gigi} renderItem={({ item, index }) => {
             return (
               <TouchableWithoutFeedback onPress={() => {
                 setPilih(item.id)
@@ -45,9 +45,9 @@ export default function Diagnosa2({ navigation, route }) {
                   flexDirection: 'row',
                   borderRadius: 10,
                   borderWidth: 1,
-                  padding: 5,
+                  padding: 8,
                   borderColor: pilih == item.id ? colors.success : colors.border,
-                  marginVertical: 8,
+                  marginVertical: 4,
                   alignItems: 'center'
                 }}>
                   <Image style={{
@@ -58,8 +58,9 @@ export default function Diagnosa2({ navigation, route }) {
                     uri: item.image
                   }} />
                   <Text style={{
+                    flex: 1,
                     fontFamily: fonts.secondary[600],
-                    fontSize: MyDimensi / 4.5,
+                    fontSize: MyDimensi / 4,
                     color: pilih == item.id ? colors.white : colors.black,
                   }}>{item.info}</Text>
                 </View>

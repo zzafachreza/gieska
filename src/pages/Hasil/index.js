@@ -71,7 +71,8 @@ export default function Hasil({ navigation, route }) {
                     }}>{item.diagnosa_status}</Text>
                     <Text style={{
                         fontFamily: fonts.secondary[600],
-                        fontSize: MyDimensi / 3.5
+                        fontSize: MyDimensi / 3.5,
+                        textAlign: 'center'
                     }}>{item.diagnosa_hasil}</Text>
                 </View>
 

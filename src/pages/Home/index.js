@@ -98,8 +98,11 @@ export default function Home({ navigation, route }) {
 
       <View style={{ padding: 10, backgroundColor: colors.tertiary, borderBottomRightRadius: 10, borderBottomLeftRadius: 10 }}>
         <View style={{ flexDirection: "row", backgroundColor: colors.tertiary, justifyContent: "space-between", }}>
-          <View style={{ alignItems: 'center', justifyContent: "center" }}>
-            <Text style={{ fontFamily: fonts.secondary[600], color: colors.primary, fontSize: MyDimensi / 3 }}>Selamat Datang di Aplikasi GEISKA,{'\n'}Ayo kita mulai, Fadhlan</Text>
+          <View style={{ alignItems: 'center', justifyContent: "center", padding: 10, }}>
+            <Text style={{ fontFamily: fonts.secondary[600], color: colors.primary, fontSize: MyDimensi / 3 }}>Selamat Datang di Aplikasi GEISKA,{'\n'}Ayo kita mulai, <Text style={{
+              fontFamily: fonts.secondary[800],
+
+            }}>{user.nama_lengkap}</Text></Text>
           </View>
           <View>
             {/* NANTI DISINI AKANTAMPIL ICON LAKI LAKI DAN PEREMPUAN, DISINI SAYA MASUKAN CONTOH ICON LAKI LAKI TERLEBIH DAHULU */}
@@ -121,11 +124,9 @@ export default function Home({ navigation, route }) {
 
 
         <View style={{
-          padding: 10,
-          justifyContent: 'center',
-          alignItems: 'center'
+          padding: 5,
         }}>
-          <Image source={user.jenis_kelamin == 'Laki-laki' ? require('../../assets/boy.png') : require('../../assets/woman.png')} style={{ height: 200, width: 200, resizeMode: 'contain' }} />
+          <Image source={user.jenis_kelamin == 'Laki-laki' ? require('../../assets/boy.png') : require('../../assets/woman.png')} style={{ height: 220, borderRadius: 10, width: '100%', resizeMode: 'contain' }} />
         </View>
 
 
@@ -141,17 +142,17 @@ export default function Home({ navigation, route }) {
                 justifyContent: 'space-between'
               }}>
                 <Image source={require('../../assets/diagnosis.png')} style={{
-                  height: 100, width: 100,
+                  height: 80, width: 80,
 
 
                 }} />
                 <Text style={{
+                  flex: 1,
                   color: colors.primary,
                   fontFamily: fonts.primary[600],
-                  fontSize: MyDimensi / 2,
+                  fontSize: MyDimensi / 2.5,
                   textAlign: "center",
                   alignSelf: "center",
-                  left: -50
                 }}>Diagnosa</Text>
               </View>
             </TouchableNativeFeedback>
@@ -164,7 +165,7 @@ export default function Home({ navigation, route }) {
                 justifyContent: 'space-between'
               }}>
                 <Image source={require('../../assets/dental.png')} style={{
-                  height: 100, width: 100,
+                  height: 80, width: 80,
 
 
                 }} />
@@ -174,7 +175,7 @@ export default function Home({ navigation, route }) {
                   fontSize: MyDimensi / 2.5,
                   textAlign: "center",
                   alignSelf: "center",
-                  left: -45
+                  flex: 1,
                 }}>Ayo Periksa{'\n'}Gigimu</Text>
               </View>
             </TouchableNativeFeedback>

@@ -107,11 +107,19 @@ export default function Diagnosa({ navigation }) {
                             style: 'warning',
                             cancellable: true
                         },
-                            callback => navigation.navigate('Diagnosa2', {
-                                ...kirim,
-                                diagnosa_status: diagnosa_status,
-                                diagnosa_hasil: diagnosa_hasil
-                            })
+                            callback => {
+
+                                if (kirim.diagnosa1 == 'TIDAK' && kirim.diagnosa2 == 'TIDAK') {
+                                    navigation.goBack();
+                                } else {
+                                    navigation.navigate('Diagnosa2', {
+                                        ...kirim,
+                                        diagnosa_status: diagnosa_status,
+                                        diagnosa_hasil: diagnosa_hasil
+                                    })
+                                }
+                            }
+
                         );
 
                     } catch (error) {
