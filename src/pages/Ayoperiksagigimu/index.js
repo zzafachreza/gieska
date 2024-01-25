@@ -20,8 +20,8 @@ export default function Periksagigimu({ navigation }) {
 
                     <View>
                         <TouchableNativeFeedback onPress={() => navigation.navigate('Konten', {
-                            judul: 'Ayo Ketahui Kondisi Tumpatan Gigi',
-                            file: 'https://gieska.okeadmin.com/datafoto/92f7641deaac483a46b3089f3c8f38ec6b3efa5b.pdf',
+                            judul: 'Ayo Ketahui Tanda-tanda Lubang Di Gigi mu',
+                            file: 'https://gieska.okeadmin.com/datafoto/01.pdf',
                         })}>
                             <View style={{
                                 backgroundColor: colors.foourty, padding: 10, borderRadius: 10, flexDirection: "row",
@@ -50,7 +50,7 @@ export default function Periksagigimu({ navigation }) {
                     <View>
                         <TouchableNativeFeedback onPress={() => navigation.navigate('Konten', {
                             judul: 'Ayo Ketahui Kondisi Tumpatan Gigi',
-                            file: 'https://gieska.okeadmin.com/datafoto/7206308112d17eb210a4eac63cd72686a9fece3f.pdf',
+                            file: 'https://gieska.okeadmin.com/datafoto/02.pdf',
                         })}>
                             <View style={{
                                 backgroundColor: colors.foourty, padding: 10, borderRadius: 10, flexDirection: "row",
