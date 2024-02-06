@@ -86,17 +86,17 @@ export default function Diagnosa({ navigation }) {
                         } else if (kirim.diagnosa1 == 'YA' && kirim.diagnosa2 == 'TIDAK') {
 
                             diagnosa_status = 'Bermasalah';
-                            diagnosa_hasil = 'Gigimu mengalami masalah, ayo segera konsultasi dan periksakan gigimu ke tenaga kesehatan';
+                            diagnosa_hasil = 'Gigimu mengalami masalah, ayo cari tau tentang masalah gigimu di GIESKA sebelum memeriksakan ke tenaga kesehatan';
 
                         } else if (kirim.diagnosa1 == 'TIDAK' && kirim.diagnosa2 == 'YA') {
 
                             diagnosa_status = 'Bermasalah';
-                            diagnosa_hasil = 'Gigimu mengalami masalah, ayo segera konsultasi dan periksakan gigimu ke tenaga kesehatan';
+                            diagnosa_hasil = 'Gigimu mengalami masalah, ayo cari tau tentang masalah gigimu di GIESKA sebelum memeriksakan ke tenaga kesehatan';
 
                         } else if (kirim.diagnosa1 == 'YA' && kirim.diagnosa2 == 'YA') {
 
                             diagnosa_status = 'Bermasalah';
-                            diagnosa_hasil = 'Gigimu mengalami masalah, ayo segera konsultasi dan periksakan gigimu ke tenaga kesehatan';
+                            diagnosa_hasil = 'Gigimu mengalami masalah, ayo cari tau tentang masalah gigimu di GIESKA sebelum memeriksakan ke tenaga kesehatan';
 
                         }
 

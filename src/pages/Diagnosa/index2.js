@@ -27,7 +27,7 @@ export default function Diagnosa2({ navigation, route }) {
   return (
     <View style={{ flex: 1, backgroundColor: colors.white }}>
       {/* HEADER */}
-      <MyHeader judul="Diagnosa" onPress={backPage} />
+      <MyHeader judul="Area Mana Gigimu yang Berlubang" onPress={backPage} />
 
 
       {/* MAIN */}

@@ -150,10 +150,10 @@ export default function Home({ navigation, route }) {
                   flex: 1,
                   color: colors.primary,
                   fontFamily: fonts.primary[600],
-                  fontSize: MyDimensi / 2.5,
+                  fontSize: MyDimensi / 3,
                   textAlign: "center",
                   alignSelf: "center",
-                }}>Diagnosa</Text>
+                }}>Ayo Periksa Gigimu</Text>
               </View>
             </TouchableNativeFeedback>
 
@@ -172,11 +172,11 @@ export default function Home({ navigation, route }) {
                 <Text style={{
                   color: colors.primary,
                   fontFamily: fonts.primary[600],
-                  fontSize: MyDimensi / 2.5,
+                  fontSize: MyDimensi / 3,
                   textAlign: "center",
                   alignSelf: "center",
                   flex: 1,
-                }}>Ayo Periksa{'\n'}Gigimu</Text>
+                }}>Ayo Kita Tambah Pengetahuanmu {'\n'}tentang Kesehatan Gigi</Text>
               </View>
             </TouchableNativeFeedback>
 
